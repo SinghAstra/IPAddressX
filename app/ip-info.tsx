@@ -1,5 +1,3 @@
-export const dynamic = "force-dynamic";
-
 interface IPAddressInfo {
   ip: string;
   city: string;
