@@ -1,19 +1,14 @@
-"use client";
-import { useEffect, useState } from "react";
+import React from "react";
+import IpViewer from "./ip-viewer";
+import LocationViewer from "./location-viewer";
 
-export default function IpViewer() {
-  const [ip, setIp] = useState("");
-
-  useEffect(() => {
-    fetch("/api/get-ip")
-      .then((res) => res.json())
-      .then((data) => setIp(data.ip));
-  }, []);
-
+const HomePage = () => {
   return (
     <div>
-      <h1>Your IP Address:</h1>
-      <p>{ip}</p>
+      <IpViewer />
+      <LocationViewer />
     </div>
   );
-}
+};
+
+export default HomePage;
