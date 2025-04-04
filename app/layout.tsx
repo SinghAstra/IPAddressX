@@ -1,6 +1,7 @@
 import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
 import NextTopLoader from "nextjs-toploader";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -69,6 +70,19 @@ export default function RootLayout({
       <body className="antialiased min-h-screen ">
         <NextTopLoader color="hsl(var(--primary))" showSpinner={false} />
         {children}
+        <Toaster
+          theme="dark"
+          toastOptions={{
+            style: {
+              fontFamily: "Space Grotesk, monospace",
+              background: "hsl(var(--muted) / 0.2)",
+              color: "hsl(var(--foreground))",
+              border: "1px solid hsl(var(--border))",
+              letterSpacing: "0.01em",
+              fontSize: ".95rem",
+            },
+          }}
+        />
       </body>
     </html>
   );
