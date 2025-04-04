@@ -1,12 +1,10 @@
 import React from "react";
-import IpViewer from "./ip-viewer";
-import LocationViewer from "./location-viewer";
+import IPInfo from "./ip-info";
 
 const HomePage = () => {
   return (
     <div>
-      <IpViewer />
-      <LocationViewer />
+      <IPInfo />
     </div>
   );
 };
